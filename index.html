@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario vs Zombies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Top HUD / UI Bar -->
+        <div id="ui">
+            <div>HP: <span id="hp">100</span></div>
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span> / 10</div>
+            <div>Kills Needed: <span id="enemies-left">10</span></div>
+        </div>
+
+        <!-- Main Canvas -->
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+        <!-- Start Menu Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <h1>MARIO VS ZOMBIES</h1>
+            <p>Survive 10 waves of zombie hordes to finish the game!</p>
+            <button class="menu-btn" onclick="startGame()">START GAME</button>
+        </div>
+
+        <!-- Game Over & Victory Menu Screen -->
+        <div id="end-screen" class="overlay-screen style-hidden">
+            <h1 id="end-title">GAME OVER</h1>
+            <p id="end-msg">You were overrun by the horde!</p>
+            <button class="menu-btn" onclick="restartGame()">RESTART GAME</button>
+        </div>
+
+        <!-- Preloader Hidden Images -->
+        <div style="display: none;">
+            <img id="img-player" src="hunter.gif" alt="Player">
+            <img id="img-zombie-normal" src="zombie.gif" alt="Normal Zombie">
+            <img id="img-zombie-flying" src="helicopter.gif" alt="Flying Zombie">
+            <img id="img-zombie-big" src="tut.gif" alt="Big Zombie">
+            <img id="img-bg" src="boo.jpg" alt="Background">
+        </div>
+
+        <!-- Controls Legend -->
+        <div id="controls">
+            <p><strong>Move:</strong> [A]/[D] | <strong>Jump:</strong> [Space] / [K] | <strong>Aim & Shoot:</strong> [W/A/S/D] + [J]</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
